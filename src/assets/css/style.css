@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Joan&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Joan", sans-serif;
+}
+
+:root{
+
+    --header: #790000;
+    --category: #400000;
+    --all: #FCFAEE;
+    --text: #FFFFFF;
+    --darktext: #000000;
+    --blue: #507687;
+    --redi: #FF6969;
+    --bluetext: #0C1844;
+    --button1: #AAB396;
+    --button2: #674636;
+    --border: #969696;
+    --light: #FFF5E1;
+    --green: #CBFFA9;
+    --inforamtion: #D5ED9F;
+    --ghost: #cfcfcf;
+    --information: #B17457;
+    --danger: #8d2727;
+}
+
+/*components*/
+.all{
+    background-color: var(--all);
+}
+.body{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.header{
+    background-color: var(--header);
+    width: 100%;
+    height: 70px;
+}
+
+.button{
+    height: 70px;
+    width: 55px;
+    padding-top: 10px;
+    cursor: pointer;
+    float: left;
+}
+.category{
+    background-color: var(--category);
+    height: 30px;
+    color: var(--text);
+    text-align: center;
+    font-size: 20px;
+}
+.example{
+    height: 300px;
+}
+.medicine{
+    width: 100%;
+    margin-top: 30px;
+}
+.health{
+    width: 160px;
+    height: 160px;
+    display: block;
+    margin: 10px auto 30px auto;
+}
+.grid{
+    height: 261px;
+    width: 100px;
+    background-color: var(--blue);
+    border-radius: 10px;
+    position: relative;
+    bottom: 100px;
+}
+.news-card-body{
+    margin: 0 20px;
+    font-family: "IBM Plex Serif", sans-serif;
+}
+.news-block{
+    border-bottom: 4px solid var(--border);
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--darktext);
+    display: block;
+}
+.info{
+    background-color: var(--light);
+    width: 610px;
+    height: 150px;
+    margin: 10px 0 5px 10px;
+    box-shadow: 4px 12px 6px 0px rgba(34, 60, 80, 0.2);
+}
+.container-title{
+    background-color: var(--redi);
+    font-size: 42px;
+    margin: 50px;
+    padding: 30px 70px;
+    text-align: center;
+    border-radius: 20px;
+    color: var(--text);
+    -webkit-text-stroke: 1px var(--darktext);
+}
+.container-sub{
+    height: 0;
+}
+.home-block {
+    min-height: 945px;
+    background: url('../images/main.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: grid;
+    align-items: center;
+}
+.home-block__container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+.menu-block {
+    background-color: var(--blue);
+    padding: 20px;
+    margin: 0 60px;
+    height: 300px;
+    width: 120px;
+    border-radius: 10px;
+}
+.interface{
+    align-items: center;
+}
+.calculator{
+    width: 450px;
+    height: 270px;
+    background-color: var(--light);
+    border: 1px solid;
+    border-radius: 30px;
+    margin: 0 auto;
+}
+.container-finance-text{
+    margin: 17px 0 0 50px;
+    font-family: "Joan", sans-serif;
+    font-size: 23px;
+}
+.calculator-container{
+    margin: 20px 0 60px 0;
+}
+.container-image{
+    padding: 13px;
+    background-color: var(--redi);
+    margin: 20px;
+    border-radius: 10px;
+    height: 100%;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-text{
+    font-family: "IBM Plex Serif", sans-serif;
+    font-size: 31px;
+    text-align: center;
+    background-color: var(--inforamtion);
+    border-radius: 10px;
+    height: 410px;
+    width: 520px;
+    margin: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.loading-card{
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+.loading-detail{
+    padding: 30px;
+}
+.skeleton-title, .skeleton-text, .skeleton-big-text{
+    width: 90%;
+    align-content: center;
+    margin: 0 auto;
+    display: block;
+    background-color: var(--border);
+    border-radius: 8px;
+    animation: ghost 1s infinite linear;
+    margin-bottom: 10px;
+}
+.skeleton-title{
+    height: 25px;
+}
+.skeleton-text{
+    height: 15px;
+}
+.skeleton-big-text{
+    height: 600px;
+}
+
+@keyframes ghost{
+    0% {
+        background-color: var(--border);
+    }
+    50% {
+        background-color: var(--ghost);
+    }
+    100% {
+        background-color: var(--border);
+    }
+}
+.title{
+    background-color: var(--light);
+    border-radius: 15px;
+    margin: 30px;
+    display: block;
+    padding: 30px;
+    box-shadow: 0px 8px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.information{
+    margin: 30px;
+    width: 560px;
+    height: 600px;
+    background-color: var(--information);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 45px;
+    line-height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error{
+    background-color: var(--danger);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--all);
+}
+/*elements*/
+.title-text{
+    font-family: "IBM Plex Serif", sans-serif;
+    text-align: center;
+}
+.title-message{
+    font-family: "IBM Plex Serif", sans-serif;
+    font-size: 25px;
+}
+.title-category{
+    text-align: center;
+}
+.main-button{
+    width: 48px;
+    height: 48px;
+}
+
+.up-phrase{
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    font-size: 52px;
+    color: var(--text);
+}
+.down-phrase{
+    height: 16px;
+    width: 100%;
+    margin-top: 50px;
+    font-size: 14px;
+    position: relative;
+    left: 400px;
+    bottom: 66px;
+    color: var(--text);
+}
+.category-text{
+    font-family: "IBM Plex Serif", sans-serif;
+}
+.news-title{
+    margin: 10px;
+    font-family: "IBM Plex Serif", sans-serif;
+}
+.news-date, .news-category{
+    margin: 10px 0 10px 15px;
+    font-size: 20px;
+    font-family: "IBM Plex Serif", sans-serif;
+}
+.finance-title{
+    font-size: 22px;
+    font-family: "IBM Plex Serif", sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+.finance-number{
+    font-size: 40px;
+    font-family: "IBM Plex Serif", sans-serif;
+    text-align: center;
+    padding-left: 25%;
+}
+.menu-block__item {
+    text-decoration: none;
+    color: var(--darktext);
+    background-color: var(--text);
+    display: block;
+    margin: -10px 0 90px -10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 8px;
+    box-shadow: 1px 8px 7px 0px rgba(34, 60, 80, 0.84);
+    font-size: 18px;
+    text-align: center;
+    font-family: "IBM Plex Serif", sans-serif;
+    cursor: pointer;
+}
+.menu-block-images{
+    width: 70px;
+    height: 70px;
+    margin: 10px 10px -15px 10px;
+}
+.finance-text{
+    font-family: "IBM Plex Serif", sans-serif;
+}
+.hurry, .illness, .payment{
+    display: inline;
+    margin: 20px;
+    font-size: 20px;
+}
+.first{
+    display: inline;
+    margin: 20px 20px 20px 25px;
+    font-family: "IBM Plex Serif", sans-serif;
+    font-size: 25px;
+}
+.second{
+    display: inline;
+    margin: 20px;
+    font-family: "IBM Plex Serif", sans-serif;
+    font-size: 25px;
+}
+.third{
+    display: inline;
+    margin: 20px 20px 20px 45px;
+    font-family: "IBM Plex Serif", sans-serif;
+    font-size: 25px;
+}
+.down-phrase2{
+    height: 16px;
+    width: 100%;
+    margin-top: 50px;
+    font-size: 14px;
+    position: relative;
+    left: 460px;
+    bottom: 66px;
+    color: var(--text);
+}
+.hospital-image{
+    width: 100%;
+}
+.error-title{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.error-description{
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+.white-btn{
+    background-color: var(--all);
+    color: var(--danger);
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 45px;
+    display: inline-block;
+}
+.info-text{
+    text-align: center;
+}
