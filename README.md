@@ -1,3 +1,6 @@
+Figma:
+https://www.figma.com/design/lDdiC4WW2URFQ7vNkcFiTi/Medicine-App-design?node-id=0-1&t=nmjqjRjbLW6LDijW-1
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
